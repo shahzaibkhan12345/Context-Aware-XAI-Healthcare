@@ -1,0 +1,5 @@
+,avg_word_count,std_word_count,avg_flesch_kincaid,std_flesch_kincaid,avg_reading_ease,avg_medical_terms,avg_actionability,avg_sentence_count
+radiologist,67.6,3.88,14.88,1.05,7.15,8.4,0.8,7.8
+cardiologist,41.6,1.02,13.25,1.71,21.14,5.2,2.2,3.8
+family_doctor,37.4,4.27,16.05,1.49,5.12,4.2,2.6,3.4
+patient,28.6,3.01,5.6,1.08,75.07,0.6,0.6,3.0

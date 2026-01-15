@@ -1,0 +1,10 @@
+\begin{tabular}{lrrrr}
+\toprule
+ & avg_word_count & avg_flesch_kincaid & avg_medical_terms & avg_actionability \\
+\midrule
+Radiologist & 67.600000 & 14.880000 & 8.400000 & 0.800000 \\
+Cardiologist & 41.600000 & 13.250000 & 5.200000 & 2.200000 \\
+Family Doctor & 37.400000 & 16.050000 & 4.200000 & 2.600000 \\
+Patient & 28.600000 & 5.600000 & 0.600000 & 0.600000 \\
+\bottomrule
+\end{tabular}
