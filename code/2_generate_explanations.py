@@ -89,48 +89,59 @@ def create_prompt(patient_data, top_features_info, role):
 Patient Data: {patient_str}
 Most Important Risk Factors (by SHAP analysis): {top_features_info}
 
-Provide a TECHNICAL explanation using precise medical terminology. Include:
-- Specific cardiovascular imaging correlates
-- Quantitative risk stratification terminology
-- Reference to vessel disease burden if applicable
+Provide a HIGHLY TECHNICAL explanation using advanced medical terminology. Include:
+- Specific cardiovascular imaging correlates and anatomical references
+- Quantitative risk stratification using clinical scoring systems
+- Detailed vessel disease burden assessment
+- Technical SHAP value interpretation
 
-Keep response under 110 words. Be technical and precise. Use medical jargon.""",
+IMPORTANT: Write at a GRADUATE-LEVEL medical complexity (Flesch-Kincaid Grade 14-16).
+Use specialized radiology terminology, quantitative metrics, and precise clinical nomenclature.
+Keep response under 110 words.""",
 
         'cardiologist': f"""You are a cardiologist explaining heart disease risk to another physician.
 
 Patient Data: {patient_str}
 Key Risk Factors (SHAP importance): {top_features_info}
 
-Provide a CLINICAL explanation including:
-- Pathophysiological significance of findings
-- Clinical decision points
-- Recommended follow-up actions (e.g., cardiology referral, stress test)
+Provide a COMPREHENSIVE CLINICAL explanation including:
+- Pathophysiological mechanisms linking risk factors to outcomes
+- Hemodynamic and electrophysiological significance
+- Evidence-based clinical decision points
+- Specific diagnostic and therapeutic recommendations
 
-Keep response under 90 words. Use medical language but focus on actionable clinical steps.""",
+IMPORTANT: Write at MEDICAL SCHOOL level complexity (Flesch-Kincaid Grade 12-14).
+Use clinical cardiology terminology but focus on actionable management.
+Keep response under 100 words.""",
 
-        'family_doctor': f"""You are a family doctor explaining heart disease risk assessment to yourself for patient management.
+        'family_doctor': f"""You are a family doctor explaining heart disease risk to a colleague in primary care.
 
 Patient Data: {patient_str}
 Main Risk Factors: {top_features_info}
 
-Provide a BALANCED explanation that:
-- Uses medical terms but keeps explanations practical
-- Focuses on next steps (lifestyle, specialist referral, medications)
-- Balances detail with clarity
+Provide a SIMPLE, PRACTICAL explanation that:
+- AVOIDS complex medical jargon - use plain medical terms only
+- Uses short sentences (under 15 words each)
+- Focuses on practical next steps: lifestyle, referral, basic medications
+- Prioritizes clarity over technical precision
 
-Keep response under 75 words. Be clear and actionable for primary care.""",
+CRITICAL: Write at HIGH SCHOOL reading level (Flesch-Kincaid Grade 8-10).
+NO abbreviations, NO complex terminology, NO multi-syllable medical words.
+Keep response under 60 words. Be brief and actionable.""",
 
-        'patient': f"""You are explaining heart disease risk to a patient with no medical background who just received test results.
+        'patient': f"""You are explaining heart disease risk to a patient who has never studied medicine.
 
 Key Risk Factors Found: {top_features_info}
 
-Provide a SIMPLE, ENCOURAGING explanation that:
-- Uses everyday language (absolutely NO medical jargon)
-- Explains what these findings mean for their health
-- Focuses on what the patient CAN DO (lifestyle changes, seeing specialist)
-- Remains positive and supportive
+Provide an EXTREMELY SIMPLE explanation that:
+- Uses only everyday words a 10-year-old would understand
+- Uses very short sentences (under 10 words each)
+- Focuses on feelings and actions, not medical facts
+- Is warm, encouraging, and supportive
 
-Keep response under 55 words. Be warm, clear, and motivating."""
+CRITICAL: Write at ELEMENTARY SCHOOL reading level (Flesch-Kincaid Grade 5-6).
+NO medical words at all. NO numbers or statistics.
+Keep response under 45 words. Be kind and hopeful."""
     }
     
     return prompts[role]
