@@ -182,8 +182,8 @@ print("\n[3/7] Generating explanations for test patients...")
 roles = ['radiologist', 'cardiologist', 'family_doctor', 'patient']
 all_results = []
 
-# Generate for first 5 patients (for speed in 10-day sprint)
-NUM_PATIENTS = 5
+# Generate for first 50 patients (statistically significant sample)
+NUM_PATIENTS = 50
 
 for idx in range(min(NUM_PATIENTS, len(X_test))):
     print(f"\n   Patient {idx+1}/{NUM_PATIENTS}:")

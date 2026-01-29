@@ -63,11 +63,14 @@ print(f"   Test samples: {len(X_test)}")
 print("\n[3/5] Training Random Forest model...")
 model = RandomForestClassifier(
     n_estimators=100, 
-    max_depth=10,
+    max_depth=8,           # Reduced from 10
+    min_samples_leaf=10,   # Added: prevents overfitting
+    min_samples_split=20,  # Added: requires more samples to split
     random_state=42,
     n_jobs=-1
 )
 model.fit(X_train, y_train)
+
 
 train_acc = model.score(X_train, y_train)
 test_acc = model.score(X_test, y_test)

@@ -76,11 +76,13 @@ fk_grades = summary_df['avg_flesch_kincaid'].values
 
 bars = ax.bar(role_labels, fk_grades, color=colors, edgecolor='black', linewidth=1.2)
 
-# Add value labels
+# Add value labels (fix -0.0 display issue)
 for bar in bars:
     height = bar.get_height()
-    ax.text(bar.get_x() + bar.get_width()/2., height,
-            f'{height:.1f}',
+    # Fix: convert -0.0 to 0.0 for display
+    display_val = abs(height) if abs(height) < 0.05 else height
+    ax.text(bar.get_x() + bar.get_width()/2., max(height, 0.5),
+            f'{display_val:.1f}',
             ha='center', va='bottom', fontsize=11, fontweight='bold')
 
 # Add reference lines
