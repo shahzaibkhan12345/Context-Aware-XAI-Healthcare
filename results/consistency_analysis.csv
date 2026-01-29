@@ -1,0 +1,16 @@
+patient_id,feature,all_roles_mention,roles_mentioning,consistency_score
+0,cp,False,2,0.5
+0,ca,False,2,0.5
+0,oldpeak,False,2,0.5
+1,ca,False,3,0.75
+1,thal,False,2,0.5
+1,exang,False,2,0.5
+2,ca,False,3,0.75
+2,cp,False,2,0.5
+2,thal,False,1,0.25
+3,ca,False,3,0.75
+3,oldpeak,False,2,0.5
+3,exang,False,1,0.25
+4,ca,True,4,1.0
+4,cp,False,1,0.25
+4,exang,False,1,0.25

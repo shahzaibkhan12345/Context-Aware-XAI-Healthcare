@@ -1,0 +1,21 @@
+patient_id,role,grounding_score,top_features,features_mentioned,explanation_length
+0,radiologist,1.0,"['cp', 'ca', 'oldpeak']",3,54
+0,cardiologist,1.0,"['cp', 'ca', 'oldpeak']",3,44
+0,family_doctor,0.0,"['cp', 'ca', 'oldpeak']",0,14
+0,patient,0.0,"['cp', 'ca', 'oldpeak']",0,11
+1,radiologist,1.0,"['ca', 'thal', 'exang']",3,72
+1,cardiologist,1.0,"['ca', 'thal', 'exang']",3,47
+1,family_doctor,0.0,"['ca', 'thal', 'exang']",0,13
+1,patient,0.3333333333333333,"['ca', 'thal', 'exang']",1,15
+2,radiologist,1.0,"['ca', 'cp', 'thal']",3,60
+2,cardiologist,0.6666666666666666,"['ca', 'cp', 'thal']",2,41
+2,family_doctor,0.0,"['ca', 'cp', 'thal']",0,19
+2,patient,0.3333333333333333,"['ca', 'cp', 'thal']",1,8
+3,radiologist,0.6666666666666666,"['ca', 'oldpeak', 'exang']",2,66
+3,cardiologist,1.0,"['ca', 'oldpeak', 'exang']",3,51
+3,family_doctor,0.0,"['ca', 'oldpeak', 'exang']",0,15
+3,patient,0.3333333333333333,"['ca', 'oldpeak', 'exang']",1,11
+4,radiologist,1.0,"['ca', 'cp', 'exang']",3,61
+4,cardiologist,0.3333333333333333,"['ca', 'cp', 'exang']",1,43
+4,family_doctor,0.3333333333333333,"['ca', 'cp', 'exang']",1,14
+4,patient,0.3333333333333333,"['ca', 'cp', 'exang']",1,11
